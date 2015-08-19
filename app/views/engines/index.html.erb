@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <th>Engine Name</th>
+    <th>Last Run</th>
+    <th>Users</th>
+    <th>Connections</th>
+  </tr>
+
+<% @engines.each do |engine| %>
+  <tr>
+    <th><a href= "<%= engine_path(engine.engineName) %>" > <%= engine.engineName %></a></th>
+    <th><%= engine.lastRun %></th>
+    <th><%= engine.users.combine %> <th>
+    <th><%= engine.connections.combine %> <th>
+  </tr>
+<% end %>
+</table>

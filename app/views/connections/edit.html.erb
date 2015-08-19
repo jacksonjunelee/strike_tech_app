@@ -1,0 +1,12 @@
+<h1> Update Connection <%= @connection.idconnections %> </h1>
+
+
+  <%= form_for @connection do |f| %>
+      <%= f.label "Exchange"%>
+      <%= f.text_field :exchange, placeholder: 'Phone Number' %><br>
+      <%= f.label "IP"%>
+      <%= f.text_field :ip, placeholder: 'Instagram Handle' %><br>
+      <%= f.label "Port"%>
+      <%= f.text_field :port, placeholder: 'Snapchat' %><br>
+    <%= f.submit %>
+  <% end %>
