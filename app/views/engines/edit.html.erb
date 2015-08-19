@@ -1,0 +1,7 @@
+<h1> Edit <%= @engine.engineName %> </h1>
+
+<%= form_for @engine do |f| %>
+  <%=f.date_select :lastRun  %>
+  <%= f.time_select :lastRun , :ignore_date => true %>
+ <%= f.submit %>
+<% end %>

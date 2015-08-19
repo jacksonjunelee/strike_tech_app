@@ -12,6 +12,7 @@
     <th><%= engine.lastRun %></th>
     <th><%= engine.users.combine %> <th>
     <th><%= engine.connections.combine %> <th>
+    <th><%= link_to "Update Last Run", edit_engine_path(engine) %></th>
   </tr>
 <% end %>
 </table>

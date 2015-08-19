@@ -2,6 +2,8 @@
 
 
   <%= form_for @connection do |f| %>
+      <%= f.label "Engine Name" %>
+      <%= select("connection", "engineName", @engines.collect {|eng| [ eng.engineName, eng.engineName ] }, {include_blank: 'None'}) %><br>
       <%= f.label "Exchange"%>
       <%= f.text_field :exchange, placeholder: 'Phone Number' %><br>
       <%= f.label "IP"%>

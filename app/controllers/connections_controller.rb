@@ -2,6 +2,7 @@ class ConnectionsController < ApplicationController
 
   def edit
     @connection = Connection.find(params[:id])
+    @engines = Engine.all
   end
 
   def update
@@ -13,6 +14,6 @@ class ConnectionsController < ApplicationController
   private
 
     def connection_params
-      params.require(:connection).permit(:exchange, :ip, :port)
+      params.require(:connection).permit(:engineName, :exchange, :ip, :port)
     end
   end
